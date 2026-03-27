@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>App下载 | 官方应用</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">MyApp</div>
+            <ul class="nav-links">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#features">功能</a></li>
+                <li><a href="#download">下载</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主视觉区 -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>全新<span class="gradient-text">MyApp</span></h1>
+                <p>让生活更简单，让工作更高效</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary" id="iosDownloadBtn">
+                        📱 App Store 下载
+                    </a>
+                    <a href="#" class="btn btn-secondary" id="androidDownloadBtn">
+                        🤖 Google Play 下载
+                    </a>
+                </div>
+                <p class="version-info">当前版本 v2.0.0 | 大小 48.5MB</p>
+            </div>
+            <div class="hero-image">
+                <div class="phone-mockup">
+                    <div class="phone-screen"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能亮点 -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择 MyApp？</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>极速体验</h3>
+                    <p>启动速度提升50%，流畅度行业领先</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>安全可靠</h3>
+                    <p>银行级加密，保护您的隐私数据</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>暗色模式</h3>
+                    <p>自动适配系统主题，护眼舒适</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>多端同步</h3>
+                    <p>手机、平板、网页实时同步数据</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域（重点） -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2 class="section-title">立即下载</h2>
+            <p class="download-subtitle">扫描二维码或点击按钮下载</p>
+            
+            <div class="download-container">
+                <!-- 左侧：二维码区域 -->
+                <div class="qr-section">
+                    <div class="qr-code" id="qrCode">
+                        <!-- 动态生成二维码 -->
+                        <canvas id="qrCanvas" width="180" height="180"></canvas>
+                    </div>
+                    <p class="qr-tip">手机扫描二维码下载</p>
+                    <div class="platform-switch">
+                        <button class="platform-btn active" data-platform="ios">📱 iOS</button>
+                        <button class="platform-btn" data-platform="android">🤖 Android</button>
+                    </div>
+                </div>
+
+                <!-- 右侧：下载按钮区域 -->
+                <div class="download-buttons-section">
+                    <div class="app-info">
+                        <div class="app-icon">📲</div>
+                        <div class="app-details">
+                            <h3>MyApp 官方版</h3>
+                            <p>免费 · 无广告 · 纯净体验</p>
+                        </div>
+                    </div>
+                    
+                    <div class="button-group">
+                        <a href="#" class="download-btn ios-btn" id="iosBtn">
+                            <span class="btn-icon">🍎</span>
+                            <div class="btn-text">
+                                <small>下载于</small>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                        <a href="#" class="download-btn android-btn" id="androidBtn">
+                            <span class="btn-icon">🤖</span>
+                            <div class="btn-text">
+                                <small>获取于</small>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="direct-download">
+                        <p class="direct-tip">或者直接下载APK</p>
+                        <a href="#" class="apk-btn" id="apkDownloadBtn">
+                            ⬇️ 下载 Android APK (48.5MB)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 MyApp. 保留所有权利。</p>
+            <div class="footer-links">
+                <a href="#">隐私政策</a>
+                <a href="#">服务条款</a>
+                <a href="#">联系我们</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 移动端底部固定下载栏 -->
+    <div class="mobile-download-bar" id="mobileDownloadBar">
+        <div class="bar-content">
+            <div class="bar-icon">📲</div>
+            <div class="bar-info">
+                <strong>MyApp</strong>
+                <span>免费下载 · 安全可靠</span>
+            </div>
+            <a href="#" class="bar-btn" id="mobileDownloadBtn">立即下载</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
